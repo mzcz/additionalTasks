@@ -3,7 +3,18 @@ package com.additionaltasks;
 import java.util.*;
 
 public class M3_D6 {
+
+    public static double getRandomAverage() {
+        double start = 2.0; double end = 5.0;
+        double random = new Random().nextDouble();
+        // liczba z zakresu (0 - 1)
+        // 2 + (jakasLiczba_miedzy_0_i_1*3)
+        return start + (random * (end - start)); // liczba z zakresu (2 - 5)
+    }
+
     public static void main(String[] args){
+
+
 
         //2
         Map<Student, Double> studentMap = new HashMap<>();
@@ -19,12 +30,7 @@ public class M3_D6 {
         for (int i = 0; i < student.size(); i++) {
             Student myStudent = student.get(i);
 
-            double n = 0.0;
-            while (n <= 1) {
-                Random randomGenerator = new Random();
-                n = randomGenerator.nextInt(6);
-            }
-            studentMap.put(myStudent, n);
+            studentMap.put(myStudent, getRandomAverage());
             System.out.println("myStudent.hashCode "+ myStudent.hashCode());
         }
 
