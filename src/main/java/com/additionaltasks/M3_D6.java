@@ -35,7 +35,7 @@ public class M3_D6 {
         }
 
 
-        for(Map.Entry<Student, Double> entry :studentMap.entrySet()){
+        for(Map.Entry<Student, Double> entry :studentMap.entrySet()) {
             System.out.println("Object: <" + entry.getKey() + ", " + entry.getValue() + ">");
         }
 
