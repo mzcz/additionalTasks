@@ -24,10 +24,12 @@ class MyOwnStack {
 
     public String pop(){
 
+        if (size() == 0) return null;
+
         Node node = head;
         head = head.next;
         n--;
-        return node.value;
+            return node.value;
     }
 
     public int size() {
@@ -41,6 +43,8 @@ public class Stack2 {
 
         int mySizeStack =5;
         MyOwnStack myOwnStack = new MyOwnStack();
+
+        myOwnStack.pop();
 
         for (int i=0;i < mySizeStack; i++ ) {
             String myNodeIn = myOwnStack.push("node" + i);
